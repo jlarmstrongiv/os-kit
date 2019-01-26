@@ -8,6 +8,7 @@
     "start": "gulp watch"
   },
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^4.0.0"
   }
 }

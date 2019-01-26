@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const del = require ('del');
 
 const atomsPath = 'src/atoms/**/*.scss';
 const moleculesPath = 'src/molecules/**/*.scss';
@@ -23,4 +24,10 @@ gulp.task('watch', function() {
   gulp.watch(atomsPath, { ignoreInitial: false, }, gulp.task('copy-atoms'));
   gulp.watch(moleculesPath, { ignoreInitial: false, }, gulp.task('copy-molecules'));
   gulp.watch(globalsPath, { ignoreInitial: false, }, gulp.task('copy-globals'));
+});
+
+gulp.task('once', gulp.parallel('copy-atoms', 'copy-molecules', 'copy-globals'));
+
+gulp.task('clean', () => {
+  return del(['../os-kit-stencil/**/*.scss',], { force: true, });
 });
