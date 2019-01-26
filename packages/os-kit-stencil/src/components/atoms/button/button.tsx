@@ -7,6 +7,6 @@ import { Component, } from '@stencil/core';
 })
 export class OsButton {
   render() {
-    return <div>Hello, World! I'm a Pickle Rick!</div>;
+    return <div class="Button">Hello, World! I'm a Pickle Rick!</div>;
   }
 }
