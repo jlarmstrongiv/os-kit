@@ -9,21 +9,21 @@ gulp.task('copy-atoms', function() {
     atomsPath,
     { base: './src/', }
   )
-    .pipe(gulp.symlink('../os-kit-stencil/src/components/'));
+    .pipe(gulp.symlink('../os-kit-stencil/src/components/', { relativeSymlinks: true, }));
 });
 gulp.task('copy-molecules', function() {
-  return gulp.src(
-    moleculesPath,
-    { base: './src/', }
-  )
-    .pipe(gulp.symlink('../os-kit-stencil/src/components/'));
+  return gulp
+    .src(moleculesPath, { base: './src/', })
+    .pipe(
+      gulp.symlink('../os-kit-stencil/src/components/', { relativeSymlinks: true, })
+    );
 });
 gulp.task('copy-globals', function() {
-  return gulp.src(
-    globalsPath,
-    { base: './src/globals/', }
-  )
-    .pipe(gulp.symlink('../os-kit-stencil/src/globals/scss/'));
+  return gulp
+    .src(globalsPath, { base: './src/globals/', })
+    .pipe(
+      gulp.symlink('../os-kit-stencil/src/globals/scss/', { relativeSymlinks: true, })
+    );
 });
 
 gulp.task('watch', function() {
