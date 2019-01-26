@@ -1,0 +1,13 @@
+{
+  "name": "os-kit-scss",
+  "version": "0.0.0",
+  "description": "scss for os-kit",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
