@@ -4,7 +4,7 @@
   "description": "System font converter and font-face generator.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ."
+    "build": "node ."
   },
   "repository": "https://github.com/jlarmstrongiv/os-kit",
   "author": "John Armstrong",
