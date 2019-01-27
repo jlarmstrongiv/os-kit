@@ -1,0 +1,20 @@
+{
+  "name": "os-kit-fonts",
+  "version": "0.0.0",
+  "description": "System font converter and font-face generator.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": "https://github.com/jlarmstrongiv/os-kit",
+  "author": "John Armstrong",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "fontmin": "ecomfe/fontmin#45/head",
+    "fs-extra": "^7.0.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-ttf2woff2": "^2.0.2"
+  }
+}

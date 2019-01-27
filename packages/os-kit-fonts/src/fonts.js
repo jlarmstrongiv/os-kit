@@ -10,88 +10,89 @@
  *  Mono https://medium.com/@shashikant.jagtap/getting-apples-sf-mono-font-in-macos-1de5183add84
  */
 
-module.exports.winFontsPath = 'C://Windows/Fonts';
-module.exports.macFontsPath = 'https://developer.apple.com/fonts/';
-module.exports.macFontsMonoPath = '/Applications/Utilities/Terminal.app/Contents/Resources/Fonts';
+// module.exports.winFontsPath = 'C://Windows/Fonts';
+// module.exports.macFontsPath = 'https://developer.apple.com/fonts/';
+// module.exports.macFontsMonoPath = '/Applications/Utilities/Terminal.app/Contents/Resources/Fonts';
 
 /**
  * Segoe UI
  */
 module.exports.segoeUi = {
-  name: 'segoe-ui',
-  path: './system-fonts/win/Segoe UI/',
+  familyName: 'segoe-ui',
+  familyPath: 'system-fonts/win/Segoe UI/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 200,
       fontWeightName: 'Light',
       fontStyle: 'normal',
-      fileName: 'segoeuil.ttf',
+      fontFile: 'segoeuil',
     },
     {
       fontWeight: 200,
       fontWeightName: 'Light',
       fontStyle: 'italic',
-      fileName: 'seguili.ttf',
+      fontFile: 'seguili',
     },
     {
       fontWeight: 300,
       fontWeightName: 'SemiLight',
       fontStyle: 'normal',
-      fileName: 'segoeuisl.ttf',
+      fontFile: 'segoeuisl',
     },
     {
       fontWeight: 300,
       fontWeightName: 'SemiLight',
       fontStyle: 'italic',
-      fileName: 'seguisli.ttf',
+      fontFile: 'seguisli',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'segoeui.ttf',
+      fontFile: 'segoeui',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'italic',
-      fileName: 'segoeuii.ttf',
+      fontFile: 'segoeuii',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'normal',
-      fileName: 'seguisb.ttf',
+      fontFile: 'seguisb',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'italic',
-      fileName: 'seguisbi.ttf',
+      fontFile: 'seguisbi',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'segoeuib.ttf',
+      fontFile: 'segoeuib',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'italic',
-      fileName: 'segoeuiz.ttf',
+      fontFile: 'segoeuiz',
     },
     {
       fontWeight: 900,
       fontWeightName: 'Black',
       fontStyle: 'normal',
-      fileName: 'seguibl.ttf',
+      fontFile: 'seguibl',
     },
     {
       fontWeight: 900,
       fontWeightName: 'Black',
       fontStyle: 'italic',
-      fileName: 'seguibli.ttf',
+      fontFile: 'seguibli',
     },
   ],
 };
@@ -100,20 +101,21 @@ module.exports.segoeUi = {
  * Segoe Print
  */
 module.exports.segoePrint = {
-  name: 'segoe-print',
-  path: './system-fonts/win/Segoe Specialty/',
+  familyName: 'segoe-print',
+  familyPath: 'system-fonts/win/Segoe Specialty/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'segoepr.ttf',
+      fontFile: 'segoepr',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'segoeprb.ttf',
+      fontFile: 'segoeprb',
     },
   ],
 };
@@ -122,20 +124,21 @@ module.exports.segoePrint = {
  * Segoe Script
  */
 module.exports.segoeScript = {
-  name: 'segoe-script',
-  path: './system-fonts/win/Segoe Specialty/',
+  familyName: 'segoe-script',
+  familyPath: 'system-fonts/win/Segoe Specialty/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'segoesc.ttf',
+      fontFile: 'segoesc',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'segoescb.ttf',
+      fontFile: 'segoescb',
     },
   ],
 };
@@ -146,49 +149,53 @@ module.exports.segoeScript = {
 module.exports.segoeIcons = {
   // MDL2 Assets
   name: 'segoe-icons',
-  path: './system-fonts/win/Segoe Specialty/',
+  familyPath: 'system-fonts/win/Segoe Specialty/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'segmdl2.ttf',
+      fontFile: 'segmdl2',
     },
   ],
 };
 module.exports.segoeEmoji = {
-  name: 'segoe-emoji',
-  path: './system-fonts/win/Segoe Specialty/',
+  familyName: 'segoe-emoji',
+  familyPath: 'system-fonts/win/Segoe Specialty/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'seguiemj.ttf',
+      fontFile: 'seguiemj',
     },
   ],
 };
 module.exports.segoeHistory = {
-  name: 'segoe-history',
-  path: './system-fonts/win/Segoe Specialty/',
+  familyName: 'segoe-history',
+  familyPath: 'system-fonts/win/Segoe Specialty/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'seguihis.ttf',
+      fontFile: 'seguihis',
     },
   ],
 };
 module.exports.segoeBrail = {
-  name: 'segoe-brail',
-  path: './system-fonts/win/Segoe Specialty/',
+  familyName: 'segoe-brail',
+  familyPath: 'system-fonts/win/Segoe Specialty/',
+  format: 'ttf',
   fonts: [
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'seguisym.ttf',
+      fontFile: 'seguisym',
     },
   ],
 };
@@ -198,116 +205,117 @@ module.exports.segoeBrail = {
  */
 module.exports.sfProDisplay =
 {
-  name: 'sf-pro-display',
-  path: './system-fonts/mac/SF Pro/',
+  familyName: 'sf-pro-display',
+  familyPath: 'system-fonts/mac/SF Pro/',
+  format: 'otf',
   fonts: [
     {
       fontWeight: 100,
       fontWeightName: 'UltraLight',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Ultralight.otf',
+      fontFile: 'SF-Pro-Display-Ultralight',
     },
     {
       fontWeight: 100,
       fontWeightName: 'UltraLight',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-UltralightItalic.otf',
+      fontFile: 'SF-Pro-Display-UltralightItalic',
     },
     {
       fontWeight: 200,
       fontWeightName: 'Thin',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Thin.otf',
+      fontFile: 'SF-Pro-Display-Thin',
     },
     {
       fontWeight: 200,
       fontWeightName: 'Thin',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-ThinItalic.otf',
+      fontFile: 'SF-Pro-Display-ThinItalic',
     },
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Light.otf',
+      fontFile: 'SF-Pro-Display-Light',
     },
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-LightItalic.otf',
+      fontFile: 'SF-Pro-Display-LightItalic',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Regular.otf',
+      fontFile: 'SF-Pro-Display-Regular',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-RegularItalic.otf',
+      fontFile: 'SF-Pro-Display-RegularItalic',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Medium.otf',
+      fontFile: 'SF-Pro-Display-Medium',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-MediumItalic.otf',
+      fontFile: 'SF-Pro-Display-MediumItalic',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Semibold.otf',
+      fontFile: 'SF-Pro-Display-Semibold',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-SemiboldItalic.otf',
+      fontFile: 'SF-Pro-Display-SemiboldItalic',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Bold.otf',
+      fontFile: 'SF-Pro-Display-Bold',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-BoldItalic.otf',
+      fontFile: 'SF-Pro-Display-BoldItalic',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Heavy.otf',
+      fontFile: 'SF-Pro-Display-Heavy',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-HeavyItalic.otf',
+      fontFile: 'SF-Pro-Display-HeavyItalic',
     },
     {
       fontWeight: 900,
       fontWeightName: 'Black',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Display-Black.otf',
+      fontFile: 'SF-Pro-Display-Black',
     },
     {
       fontWeight: 900,
       fontWeightName: 'Black',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Display-BlackItalic.otf',
+      fontFile: 'SF-Pro-Display-BlackItalic',
     },
   ],
 };
@@ -316,80 +324,81 @@ module.exports.sfProDisplay =
  * SF Pro Text
  */
 module.exports.sfProText = {
-  name: 'sf-pro-text',
-  path: './system-fonts/mac/SF Pro',
+  familyName: 'sf-pro-text',
+  familyPath: 'system-fonts/mac/SF Pro',
+  format: 'otf',
   fonts: [
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Text-Light.otf',
+      fontFile: 'SF-Pro-Text-Light',
     },
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Text-LightItalic.otf',
+      fontFile: 'SF-Pro-Text-LightItalic',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Text-Regular.otf',
+      fontFile: 'SF-Pro-Text-Regular',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Text-RegularItalic.otf',
+      fontFile: 'SF-Pro-Text-RegularItalic',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Text-Medium.otf',
+      fontFile: 'SF-Pro-Text-Medium',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Text-MediumItalic.otf',
+      fontFile: 'SF-Pro-Text-MediumItalic',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Text-Semibold.otf',
+      fontFile: 'SF-Pro-Text-Semibold',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Text-SemiboldItalic.otf',
+      fontFile: 'SF-Pro-Text-SemiboldItalic',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Text-Bold.otf',
+      fontFile: 'SF-Pro-Text-Bold',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Text-BoldItalic.otf',
+      fontFile: 'SF-Pro-Text-BoldItalic',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'normal',
-      fileName: 'SF-Pro-Text-Heavy.otf',
+      fontFile: 'SF-Pro-Text-Heavy',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'italic',
-      fileName: 'SF-Pro-Text-HeavyItalic.otf',
+      fontFile: 'SF-Pro-Text-HeavyItalic',
     },
   ],
 };
@@ -398,141 +407,143 @@ module.exports.sfProText = {
  * SF Pro Compact Display
  */
 module.exports.sfProCompactDisplay = {
-  name: 'sf-compact-display',
-  path: './system-fonts/mac/SF Compact/',
+  familyName: 'sf-compact-display',
+  familyPath: 'system-fonts/mac/SF Compact/',
+  format: 'otf',
   fonts: [
     {
       fontWeight: 100,
       fontWeightName: 'UltraLight',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Ultralight.otf',
+      fontFile: 'SFCompactDisplay-Ultralight',
     },
     {
       fontWeight: 200,
       fontWeightName: 'Thin',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Thin.otf',
+      fontFile: 'SFCompactDisplay-Thin',
     },
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Light.otf',
+      fontFile: 'SFCompactDisplay-Light',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Regular.otf',
+      fontFile: 'SFCompactDisplay-Regular',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Medium.otf',
+      fontFile: 'SFCompactDisplay-Medium',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Semibold.otf',
+      fontFile: 'SFCompactDisplay-Semibold',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Bold.otf',
+      fontFile: 'SFCompactDisplay-Bold',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Heavy.otf',
+      fontFile: 'SFCompactDisplay-Heavy',
     },
     {
       fontWeight: 900,
       fontWeightName: 'Black',
       fontStyle: 'normal',
-      fileName: 'SFCompactDisplay-Black.otf',
+      fontFile: 'SFCompactDisplay-Black',
     },
   ],
 };
 
 module.exports.sfProCompactText = {
-  name: 'sf-compact-text',
-  path: './system-fonts/mac/SF Compact/',
+  familyName: 'sf-compact-text',
+  familyPath: 'system-fonts/mac/SF Compact/',
+  format: 'otf',
   fonts: [
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'normal',
-      fileName: 'SFCompactText-Light.otf',
+      fontFile: 'SFCompactText-Light',
     },
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'italic',
-      fileName: 'SFCompactText-LightItalic.otf',
+      fontFile: 'SFCompactText-LightItalic',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'SFCompactText-Regular.otf',
+      fontFile: 'SFCompactText-Regular',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'italic',
-      fileName: 'SFCompactText-RegularItalic.otf',
+      fontFile: 'SFCompactText-RegularItalic',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'normal',
-      fileName: 'SFCompactText-Medium.otf',
+      fontFile: 'SFCompactText-Medium',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'italic',
-      fileName: 'SFCompactText-MediumItalic.otf',
+      fontFile: 'SFCompactText-MediumItalic',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'normal',
-      fileName: 'SFCompactText-Semibold.otf',
+      fontFile: 'SFCompactText-Semibold',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'italic',
-      fileName: 'SFCompactText-SemiboldItalic.otf',
+      fontFile: 'SFCompactText-SemiboldItalic',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'SFCompactText-Bold.otf',
+      fontFile: 'SFCompactText-Bold',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'italic',
-      fileName: 'SFCompactText-BoldItalic.otf',
+      fontFile: 'SFCompactText-BoldItalic',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'normal',
-      fileName: 'SFCompactText-Heavy.otf',
+      fontFile: 'SFCompactText-Heavy',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'italic',
-      fileName: 'SFCompactText-HeavyItalic.otf',
+      fontFile: 'SFCompactText-HeavyItalic',
     },
   ],
 };
@@ -541,80 +552,81 @@ module.exports.sfProCompactText = {
  * SF Mono
  */
 module.exports.sfMono = {
-  name: 'sf-mono',
-  path: './system-fonts/mac/SF Mono/',
+  familyName: 'sf-mono',
+  familyPath: 'system-fonts/mac/SF Mono/',
+  format: 'otf',
   fonts: [
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'normal',
-      fileName: 'SFMono-Light.otf',
+      fontFile: 'SFMono-Light',
     },
     {
       fontWeight: 300,
       fontWeightName: 'Light',
       fontStyle: 'italic',
-      fileName: 'SFMono-LightItalic.otf',
+      fontFile: 'SFMono-LightItalic',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'normal',
-      fileName: 'SFMono-Regular.otf',
+      fontFile: 'SFMono-Regular',
     },
     {
       fontWeight: 400,
       fontWeightName: 'Regular',
       fontStyle: 'italic',
-      fileName: 'SFMono-RegularItalic.otf',
+      fontFile: 'SFMono-RegularItalic',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'normal',
-      fileName: 'SFMono-Medium.otf',
+      fontFile: 'SFMono-Medium',
     },
     {
       fontWeight: 500,
       fontWeightName: 'Medium',
       fontStyle: 'italic',
-      fileName: 'SFMono-MediumItalic.otf',
+      fontFile: 'SFMono-MediumItalic',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'normal',
-      fileName: 'SFMono-Semibold.otf',
+      fontFile: 'SFMono-Semibold',
     },
     {
       fontWeight: 600,
       fontWeightName: 'SemiBold',
       fontStyle: 'italic',
-      fileName: 'SFMono-SemiboldItalic.otf',
+      fontFile: 'SFMono-SemiboldItalic',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'normal',
-      fileName: 'SFMono-Bold.otf',
+      fontFile: 'SFMono-Bold',
     },
     {
       fontWeight: 700,
       fontWeightName: 'Bold',
       fontStyle: 'italic',
-      fileName: 'SFMono-BoldItalic.otf',
+      fontFile: 'SFMono-BoldItalic',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'normal',
-      fileName: 'SFMono-Heavy.otf',
+      fontFile: 'SFMono-Heavy',
     },
     {
       fontWeight: 800,
       fontWeightName: 'Heavy',
       fontStyle: 'italic',
-      fileName: 'SFMono-HeavyItalic.otf',
+      fontFile: 'SFMono-HeavyItalic',
     },
   ],
 };
