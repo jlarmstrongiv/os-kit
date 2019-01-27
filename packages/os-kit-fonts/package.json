@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "fontmin": "ecomfe/fontmin#45/head",
+    "fontmin": "https://github.com/jlarmstrongiv/fontmin",
     "fs-extra": "^7.0.1",
     "gulp-flatten": "^0.4.0",
     "gulp-rename": "^1.4.0",

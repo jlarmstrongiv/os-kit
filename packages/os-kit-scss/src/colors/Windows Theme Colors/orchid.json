@@ -1,0 +1,11 @@
+{
+	"Background":"#FFFFFFFF",
+	"Foreground":"#FF000000",
+	"AccentDark3":"#FF33002D",
+	"AccentDark2":"#FF500047",
+	"AccentDark1":"#FF700063",
+	"Accent":"#FF9A0089",
+	"AccentLight1":"#FFCB3DBB",
+	"AccentLight2":"#FFF266E3",
+	"AccentLight3":"#FFFD8DF1"
+}

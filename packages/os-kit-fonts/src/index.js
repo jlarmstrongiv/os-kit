@@ -1,3 +1,8 @@
+// CLI options
+// https://github.com/ecomfe/fontmin/issues/68#issuecomment-389030895
+// remake loop so that checking otf vs ttf is inside loop, not two loops
+//   that way, it will be easier to generate master css file
+
 const fs = require('fs-extra');
 const Fontmin = require('fontmin');
 const ttf2woff2 = require('gulp-ttf2woff2');
@@ -72,7 +77,6 @@ const start = async () => {
     } = fontGroups[fontGroupKey];
     if (format === 'otf') {
       for (const fontKey in fonts) {
-        // the * seems hacky
         const {
           fontWeight,
           fontWeightName,
@@ -80,6 +84,7 @@ const start = async () => {
           fontFile,
         } = fonts[fontKey];
 
+        // the * seems hacky
         const path = `./src/${familyPath}*${fontFile}.${format}`;
         const newPath = `${familyName}-subset-${fontWeight}.otf`;
 
@@ -88,7 +93,6 @@ const start = async () => {
     }
     if (fontGroups[fontGroupKey].format === 'ttf') {
       for (const fontKey in fontGroups[fontGroupKey].fonts) {
-        // the * seems hacky
         const {
           fontWeight,
           fontWeightName,
@@ -96,6 +100,7 @@ const start = async () => {
           fontFile,
         } = fonts[fontKey];
 
+        // the * seems hacky
         const path = `./src/${familyPath}*${fontFile}.${format}`;
         const newPath = `${familyName}-subset-${fontWeight}.ttf`;
 
