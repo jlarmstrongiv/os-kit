@@ -19,7 +19,7 @@ module.exports.macFontsMonoPath = '/Applications/Utilities/Terminal.app/Contents
  */
 module.exports.segoeUi = {
   name: 'segoe-ui',
-  path: './win/fonts/Segoe UI/',
+  path: './system-fonts/win/Segoe UI/',
   fonts: [
     {
       fontWeight: 200,
@@ -101,7 +101,7 @@ module.exports.segoeUi = {
  */
 module.exports.segoePrint = {
   name: 'segoe-print',
-  path: './win/fonts/Segoe Specialty/',
+  path: './system-fonts/win/Segoe Specialty/',
   fonts: [
     {
       fontWeight: 400,
@@ -123,7 +123,7 @@ module.exports.segoePrint = {
  */
 module.exports.segoeScript = {
   name: 'segoe-script',
-  path: './win/fonts/Segoe Specialty/',
+  path: './system-fonts/win/Segoe Specialty/',
   fonts: [
     {
       fontWeight: 400,
@@ -146,7 +146,7 @@ module.exports.segoeScript = {
 module.exports.segoeIcons = {
   // MDL2 Assets
   name: 'segoe-icons',
-  path: './win/fonts/Segoe Specialty/',
+  path: './system-fonts/win/Segoe Specialty/',
   fonts: [
     {
       fontWeight: 400,
@@ -158,7 +158,7 @@ module.exports.segoeIcons = {
 };
 module.exports.segoeEmoji = {
   name: 'segoe-emoji',
-  path: './win/fonts/Segoe Specialty/',
+  path: './system-fonts/win/Segoe Specialty/',
   fonts: [
     {
       fontWeight: 400,
@@ -170,7 +170,7 @@ module.exports.segoeEmoji = {
 };
 module.exports.segoeHistory = {
   name: 'segoe-history',
-  path: './win/fonts/Segoe Specialty/',
+  path: './system-fonts/win/Segoe Specialty/',
   fonts: [
     {
       fontWeight: 400,
@@ -182,7 +182,7 @@ module.exports.segoeHistory = {
 };
 module.exports.segoeBrail = {
   name: 'segoe-brail',
-  path: './win/fonts/Segoe Specialty/',
+  path: './system-fonts/win/Segoe Specialty/',
   fonts: [
     {
       fontWeight: 400,
@@ -199,7 +199,7 @@ module.exports.segoeBrail = {
 module.exports.sfProDisplay =
 {
   name: 'sf-pro-display',
-  path: './mac/fonts/SF Pro/',
+  path: './system-fonts/mac/SF Pro/',
   fonts: [
     {
       fontWeight: 100,
@@ -317,7 +317,7 @@ module.exports.sfProDisplay =
  */
 module.exports.sfProText = {
   name: 'sf-pro-text',
-  path: './mac/fonts/SF Pro',
+  path: './system-fonts/mac/SF Pro',
   fonts: [
     {
       fontWeight: 300,
@@ -399,7 +399,7 @@ module.exports.sfProText = {
  */
 module.exports.sfProCompactDisplay = {
   name: 'sf-compact-display',
-  path: './mac/fonts/SF Compact/',
+  path: './system-fonts/mac/SF Compact/',
   fonts: [
     {
       fontWeight: 100,
@@ -460,7 +460,7 @@ module.exports.sfProCompactDisplay = {
 
 module.exports.sfProCompactText = {
   name: 'sf-compact-text',
-  path: './mac/fonts/SF Compact/',
+  path: './system-fonts/mac/SF Compact/',
   fonts: [
     {
       fontWeight: 300,
@@ -542,7 +542,7 @@ module.exports.sfProCompactText = {
  */
 module.exports.sfMono = {
   name: 'sf-mono',
-  path: './mac/fonts/SF Mono/',
+  path: './system-fonts/mac/SF Mono/',
   fonts: [
     {
       fontWeight: 300,
