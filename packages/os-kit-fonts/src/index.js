@@ -1,10 +1,13 @@
 // CLI options
 // https://github.com/ecomfe/fontmin/issues/68#issuecomment-389030895
-// remake loop so that checking otf vs ttf is inside loop, not two loops
-//   that way, it will be easier to generate master css file
 // still need gulp file to create symlinks in builds
 // font face generator https://github.com/ecomfe/fontmin/blob/master/lib/font-face.tpl
 // export multiple font formats
+// MDL2 Font https://scottdorman.github.io/mdl2-icons/icons/
+
+// Other
+// Mockup Links https://mockups.kkuistore.com/mockups/
+// https://apple.stackexchange.com/questions/73849/mac-os-x-10-7-window-shadow-params
 
 const fs = require('fs-extra');
 const Fontmin = require('fontmin');
@@ -40,11 +43,12 @@ const convertToOtf = async (path, newPath) => {
     const fontmin = new Fontmin()
       .src(path)
       .use(flatten())
-      .use(rename(newPath))
+      .use(rename(`${newPath}.otf`))
       .use(Fontmin.otf2ttf({ text: decodedChars, }))
       .use(Fontmin.glyph(decodedChars))
+      .use(Fontmin.ttf2woff())
       .use(ttf2woff2())
-      .dest('./src/dist/otf');
+      .dest(`./src/dist/${newPath}/`);
     const fontFiles = await fontminPromise(fontmin);
   } catch (error) {
     console.log(path);
@@ -59,10 +63,11 @@ const convertToTtf = async (path, newPath) => {
     const fontmin = new Fontmin()
       .src(path)
       .use(flatten())
-      .use(rename(newPath))
+      .use(rename(`${newPath}.ttf`))
       .use(Fontmin.glyph(decodedChars))
+      .use(Fontmin.ttf2woff())
       .use(ttf2woff2())
-      .dest('./src/dist/ttf');
+      .dest(`./src/dist/${newPath}/`);
     const fontFiles = await fontminPromise(fontmin);
   } catch (error) {
     console.log(path);
@@ -78,44 +83,35 @@ const start = async () => {
       format,
       fonts,
     } = fontGroups[fontGroupKey];
-    if (format === 'otf') {
-      for (const fontKey in fonts) {
-        const {
-          fontWeight,
-          fontWeightName,
-          fontStyle,
-          fontFile,
-        } = fonts[fontKey];
 
-        // the * seems hacky
-        const path = `./src/${familyPath}*${fontFile}.${format}`;
-        const newPath = `${familyName}-subset-${fontWeight}.otf`;
+    for (const fontKey in fonts) {
+      const {
+        fontWeight,
+        fontWeightName,
+        fontStyle,
+        fontFile,
+      } = fonts[fontKey];
 
-        await convertToOtf(path, newPath);
+      const path = `./src/**/*${fontFile}.${format}`;
+      const newPath = `${familyName}-subset-${fontWeight}`;
+
+      // emoji is the only one that errors
+      const fontFileBlackList = ['seguiemj',];
+
+      if (!fontFileBlackList.includes(fontFile)) {
+        if (format === 'otf') {
+          await convertToOtf(path, newPath);
+        }
+        if (format === 'ttf') {
+          await convertToTtf(path, newPath);
+        }
       }
     }
-    if (fontGroups[fontGroupKey].format === 'ttf') {
-      for (const fontKey in fontGroups[fontGroupKey].fonts) {
-        const {
-          fontWeight,
-          fontWeightName,
-          fontStyle,
-          fontFile,
-        } = fonts[fontKey];
 
-        // the * seems hacky
-        const path = `./src/${familyPath}*${fontFile}.${format}`;
-        const newPath = `${familyName}-subset-${fontWeight}.ttf`;
-
-        // const path = `./src/${fontGroups[fontGroupKey].path}*${fontGroups[fontGroupKey].fonts[fontKey].fileName}.${fontGroups[fontGroupKey].format}`;
-        // const newPath = `${fontGroups[fontGroupKey].fonts[fontKey].fileName}`;
-
-        await convertToTtf(path, newPath);
-      }
-    }
   }
 };
 start();
+
 // Object.entries(fontGroups).map(async ([fontGroupKey, fontGroup,]) => {
 //   if (fontGroup.format === 'otf') {
 
@@ -124,6 +120,8 @@ start();
 //   }
 // });
 
+// const path = `./src/${fontGroups[fontGroupKey].path}*${fontGroups[fontGroupKey].fonts[fontKey].fileName}.${fontGroups[fontGroupKey].format}`;
+// const newPath = `${fontGroups[fontGroupKey].fonts[fontKey].fileName}`;
 
 // Object.entries(fontGroups).map(async ([fontGroupKey, fontGroup,]) => {
 //   // console.log(fontGroup);
