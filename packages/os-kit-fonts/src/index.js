@@ -1,5 +1,6 @@
 // CLI options
 // https://github.com/ecomfe/fontmin/issues/68#issuecomment-389030895
+// don't forget to turn on the compress option for woff
 // still need gulp file to create symlinks in builds
 // font face generator https://github.com/ecomfe/fontmin/blob/master/lib/font-face.tpl
 // export multiple font formats
