@@ -2,6 +2,9 @@
 // https://github.com/ecomfe/fontmin/issues/68#issuecomment-389030895
 // remake loop so that checking otf vs ttf is inside loop, not two loops
 //   that way, it will be easier to generate master css file
+// still need gulp file to create symlinks in builds
+// font face generator https://github.com/ecomfe/fontmin/blob/master/lib/font-face.tpl
+// export multiple font formats
 
 const fs = require('fs-extra');
 const Fontmin = require('fontmin');
